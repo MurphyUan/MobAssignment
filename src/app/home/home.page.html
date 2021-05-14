@@ -1,18 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Murphy Arcade
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
   <div class="ion-text-center">
-    <div id="game"></div>
+    <ion-card [routerLink]="['/game']" routerDirection="forward">
+      <img src="./assets/icon/FlappyTitlePhs.png"/>
+      <ion-card-header>
+        <ion-card-title>Game</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-button >Go To LeaderBoard</ion-button>
+    <ion-button >Go To Credits</ion-button>
   </div>
 </ion-content>
