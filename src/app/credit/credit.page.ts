@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WeatherService} from '../services/weather.service';
 
 @Component({
   selector: 'app-credit',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./credit.page.scss'],
 })
 export class CreditPage implements OnInit {
-
-  constructor() { }
+  weather: any = [];
+  constructor(private service:WeatherService) { }
 
   ngOnInit() {
+    this.service.GetWeatherData().subscribe((data)=>{
+      this.weather = data.weather;
+      console.log(this.weather);
+    });
   }
 
 }

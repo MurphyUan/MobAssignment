@@ -14,7 +14,7 @@
         <ion-card-title>Game</ion-card-title>
       </ion-card-header>
     </ion-card>
-    <ion-button >Go To LeaderBoard</ion-button>
-    <ion-button >Go To Credits</ion-button>
+    <ion-button [routerLink]="['/leaderboard']" routerDirection="forward">Go To LeaderBoard</ion-button>
+    <ion-button [routerLink]="['/credit']" routerDirection="forward">Go To Credits</ion-button>
   </div>
 </ion-content>
